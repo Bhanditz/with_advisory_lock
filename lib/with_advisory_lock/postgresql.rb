@@ -35,8 +35,6 @@ module WithAdvisoryLock
             # pg advisory args must be 31 bit ints
             ea.to_i & 0x7fffffff
           end
-        end.tap do |ks|
-          Rails.logger.debug("lock keys #{ks.inspect}")
         end
       end
     end    
